@@ -23,5 +23,5 @@ const Book = () => {
 const Image = () => <img src="https://m.media-amazon.com/images/I/81o3eY5E-rL._AC_UL320_.jpg" alt="" />
 
 const Title = () => <h1>Bestseller I love you to the Moon and Back</h1>
-const Author = () => <h3>Susan Wiggs</h3>
+const Author = () => <h3 style={{color: '#617d98', fontSize:'0.75rem',marginTop:'0.25rem'}}>Susan Wiggs</h3>
 ReactDOM.render(<BookList />, document.getElementById('root'))
