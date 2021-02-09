@@ -15,23 +15,30 @@ const books = [
   img: 'https://multimedia.knv.de/cover/74/86/89/7486897600001Z.jpg',
   title: 'Bestseller I love you ',
   author: 'Wiggs'
+},
+{
+  img: 'https://multimedia.knv.de/cover/80/78/49/8078493400001Z.jpg',
+  title: 'fur kleine kinder',
+  author: 'Paunter'
 }
 ]
-const names = ['kamran', 'tahir', 'saqib']
-const newName = names.map((name) => {
-return <h1>{name}</h1>
-})
   
 function BookList(){
   return (
     <section className='booklist'>
-     {newNames}
+     {books.map((book)=>{
+       const {img,title,author} = book
+       return(
+         <Book book={book}></Book>
+       )
+     })
+     }
     </section>
   )
 }
 
 const Book = (props) => {
-  const {img, title, author} = props;
+  const {img, title, author} = props.book
   return (
   <article className='book'>
    <img src={img} alt="" />
