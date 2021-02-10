@@ -4,27 +4,8 @@ import ReactDOM from 'react-dom'
 //css
 import './index.css'
 
-// setup vars
-const books = [
-  {
-  id:1,
-  img: 'https://multimedia.knv.de/cover/69/41/77/6941774600001Z.jpg',
-  title: 'Bestseller I love you to the Moon and Back',
-  author: 'Susan Wiggs'
-},
-{
-  id:2,
-  img: 'https://multimedia.knv.de/cover/74/86/89/7486897600001Z.jpg',
-  title: 'Bestseller I love you ',
-  author: 'Wiggs'
-},
-{
-  id:3,
-  img: 'https://multimedia.knv.de/cover/80/78/49/8078493400001Z.jpg',
-  title: 'fur kleine kinder',
-  author: 'Paunter'
-}
-]
+import {books} from './books'
+import Book from './Book'
   
 function BookList(){
   return (
@@ -40,19 +21,6 @@ function BookList(){
   )
 }
 
-const Book = ({img,title,author}) => {
-  //attribute, eventHandler
-  // onClick, onMouseOver
-  const clickHandler = () => {
-    alert('hello world');
-  }
-  return (
-  <article className='book' onMouseOver={()=> { console.log(title)}}>
-   <img src={img} alt="" />
-   <h1>{title}</h1>
-   <h3 >{author}</h3>
-   <button type='button' onClick={clickHandler}>Button</button>
-    </article>)
-}
+
 
 ReactDOM.render(<BookList />, document.getElementById('root'))
